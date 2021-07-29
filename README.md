@@ -42,3 +42,9 @@ $ systemctl daemon-reload
 $ systemctl enable blackpage.service
 $ sudo service blackpage start
 ```
+
+If/when you update blackpage, you will have to restart the service for the new binary to be used.
+```sh
+$ sudo service blackpage restart
+```
+Alternatively, you can simply reboot.
