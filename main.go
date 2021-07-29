@@ -12,12 +12,12 @@ var (
 )
 
 func main() {
-  println("starting blackpage")
+  println("Starting blackpage")
 	if err := run(); err != nil {
 		fmt.Fprintf(os.Stdout, "%s\n", err)
 		os.Exit(1)
 	}
-  println("blackpage exited")
+  println("Blackpage exited")
 }
 
 func run() error {
@@ -27,7 +27,7 @@ func run() error {
 	}
 
 	port := fmt.Sprintf(":%d", s.port)
-  s.l.Printf("Now listening on %s", port)
+  fmt.Printf("Now listening on %s...\n", port)
 	err = http.ListenAndServe(port, s)
 	if err != nil {
 		return err
